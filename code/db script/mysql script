@@ -1,8 +1,8 @@
 --create database
-create database herbal bliss;
+create database herbal_bliss;
 
 --use database
-use database;
+use herbal_bliss;
 
 -- 1. Create users table first (since orders references it)
 CREATE TABLE IF NOT EXISTS users (
@@ -45,3 +45,4 @@ CREATE TABLE IF NOT EXISTS order_items (
     FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE
 
 ) ENGINE=InnoDB;
+
